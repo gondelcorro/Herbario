@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="etiqueta" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d05482aa-55ad-4e18-a9ca-6010a59ff1ef">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="paramEspecie" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT * FROM especie INNER JOIN familia ON especie.esp_id_fam=familia.fam_id INNER JOIN genero ON especie.esp_id_gen=genero.gen_id WHERE especie.esp_id=$P{paramEspecie}]]>
+	</queryString>
+	<field name="esp_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_nom_vul" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_recolector" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_acompanante" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_fecha_recol" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_num_colecc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_pais" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_prov" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_dpto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_localidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_observaciones" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_fec_ingreso" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_deter_por" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_imagen" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_duplicado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_detalle_dup" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_id_fam" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_id_gen" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="esp_estado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fam_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fam_nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="art_estado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gen_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gen_nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_fam" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gen_estado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="252" splitType="Stretch">
+			<textField>
+				<reportElement x="104" y="75" width="220" height="16" uuid="51a1a7cf-1dd9-459b-81c2-ac6d57adc0a5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_deter_por}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="51" y="11" width="248" height="20" uuid="201ac16f-1708-4961-aa90-023da0213107"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JARDÍN BOTÁNICO "ING. FTAL. LUCAS D. ROIC"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="31" width="248" height="20" uuid="f8c9ef61-c47d-41a5-af04-388080772fe1"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[HERBARIO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="259" y="51" width="65" height="16" uuid="332c99e7-a8f8-4d0c-8b5a-7617e00a3b63"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="75" width="91" height="16" uuid="0c173000-7589-4aa6-b6ca-7b729d9975c5"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Determinado por:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="91" width="49" height="16" uuid="3848f2eb-bb01-4d53-9eca-0f47315f9492"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Familia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="107" width="37" height="16" uuid="17266d34-eb99-4429-9cbd-c80a0f26f3a6"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[N. C.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="123" width="37" height="16" uuid="24ec22cf-7e8b-4b14-8e78-24de8127529e"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[N. V.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="139" width="37" height="16" uuid="e67f37e3-28b6-4bfd-b08f-05d540555a9a"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[País:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="155" width="37" height="16" uuid="ebb4aa91-b2f9-40e8-805f-0201df50a8f3"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dpto.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="171" width="64" height="16" uuid="9c1963ab-09f1-4202-9bf9-0fc98b1e8b94"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recolector:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="187" width="37" height="16" uuid="07a3554b-1a8b-437d-b8a9-6358883c1576"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="203" width="81" height="16" uuid="ce68814f-d733-4af4-8696-3f866e7cedf4"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="51" width="17" height="16" uuid="c592bbc1-0c3b-4a65-a376-014b0fe86896"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="13" y="11" width="38" height="30" uuid="9e105d28-8c88-4965-a6d5-a8b8684cfcf1"/>
+				<imageExpression><![CDATA["D:\\Trabajos\\Trabajo Herbario\\logo.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="62" y="91" width="262" height="16" uuid="d6cc4b14-5e32-4222-be73-86b1a4f37d07"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fam_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="107" width="273" height="16" uuid="c8b91366-5960-4c15-8f3f-c50a11e0cb04"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gen_nombre} +" "+ $F{esp_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="123" width="273" height="16" uuid="58a7bdb4-97e2-4710-8347-5287f85098b1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_nom_vul}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="153" y="139" width="57" height="16" uuid="72ebdc81-f692-4116-8e97-67e4e1ff40d0"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Provincia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="155" width="57" height="16" uuid="b351a4ae-c319-487e-8291-d351722a16ec"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Localidad:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="51" y="139" width="102" height="16" uuid="9030e202-7d37-46b0-af5d-afb48681d92b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_pais}.equals("-- SELECCIONE --")? "" : $F{esp_pais}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="210" y="139" width="114" height="16" uuid="221e210b-4827-496e-bb6d-5bf2a9705b01"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_prov}.equals("-- SELECCIONE --")? "" : $F{esp_prov}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="210" y="155" width="114" height="16" uuid="809998a6-b9be-4988-8fa8-3db0e6389c3b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_localidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="155" width="102" height="16" uuid="f6f01aac-22f5-41ec-ae24-00c6af90b990"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_dpto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="77" y="171" width="247" height="16" uuid="c47799cd-a383-4166-94cb-0d223666e335"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_recolector}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="187" width="102" height="16" uuid="b4b19bc0-7088-4ee0-b1fc-ff95383fbc0b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_fecha_recol}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="203" width="230" height="16" uuid="b00b12da-e337-43c4-a5ba-6ddf2d951de7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_observaciones}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="219" width="210" height="16" uuid="13e74dd8-541a-4e8e-8228-76cfe4b41a70"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_fec_ingreso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="219" width="101" height="16" uuid="457fcdcd-83bb-4047-89f2-e47e0cd8be62"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ingreso al Herbario:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="324" height="247" uuid="e37e523f-179e-4eba-9a76-ecb771828c23"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="153" y="187" width="79" height="16" uuid="10800633-f7eb-44e4-a98e-5909a33c99df"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°  Colección:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="232" y="187" width="92" height="16" uuid="62747fa7-4292-432c-87ad-d587bb4d995d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{esp_num_colecc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
